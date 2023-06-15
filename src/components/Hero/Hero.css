@@ -1,0 +1,22 @@
+@keyframes scroll-animation {
+  0% {
+    to: 5px;
+  }
+  50% {
+    top: 30px;
+  }
+  100% {
+    top: 5px;
+  }
+}
+
+/* The element to apply the animation to */
+#scroller {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.8);
+  position: absolute;
+  top: 5px;
+  animation: 2s scroll-animation infinite ease-in-out;
+}

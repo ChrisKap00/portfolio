@@ -1,11 +1,14 @@
-import { Box, Container, Typography } from "@mui/material";
+import { Box } from "@mui/material";
 import React from "react";
 
 const height = "75px";
 
 const Navbar = () => {
   return (
-    <Box component="div" sx={{ height, display: "sticky", top: 0, backgroundColor: "#040615" }}>
+    <Box
+      component="div"
+      sx={{ height, position: "sticky", top: 0, backgroundColor: "#040615", zIndex: 2 }}
+    >
       <Box sx={{ display: "flex", height }}>
         <label
           style={{

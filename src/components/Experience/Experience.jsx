@@ -9,7 +9,8 @@ import afoi from "../../assets/images/afoi_alexiou.png";
 const experiences = [
   {
     icon: afoi,
-    title: "Afoi Alexiou",
+    title: "Full Stack Developer",
+    company: "Afoi Alexiou OE",
     description:
       "I developed and deployed an eshop full stack web application for the company. The stack used for the project was the MERN stack.",
     link: "https://afoialexiou.gr",
@@ -17,7 +18,8 @@ const experiences = [
   },
   {
     icon: afoi,
-    title: "Afoi Alexiou",
+    title: "Full Stack Developer",
+    company: "Afoi Alexiou OE",
     description:
       "I developed and deployed an eshop full stack web application for the company. The stack used for the project was the MERN stack.",
     link: "https://afoialexiou.gr",
@@ -25,7 +27,8 @@ const experiences = [
   },
   {
     icon: afoi,
-    title: "Afoi Alexiou",
+    title: "Full Stack Developer",
+    company: "Afoi Alexiou OE",
     description:
       "I developed and deployed an eshop full stack web application for the company. The stack used for the project was the MERN stack.",
     link: "https://afoialexiou.gr",

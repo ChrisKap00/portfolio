@@ -26,7 +26,16 @@ const Hero = () => {
   }, [cursor]);
 
   return (
-    <Box sx={{ height: "calc(100vh - 75px)", position: "relative" }}>
+    <Box
+      id="home"
+      sx={{
+        height: "calc(100vh - 75px)",
+        width: "100%",
+        position: "relative",
+        paddingTop: { xs: "1rem", md: 0 },
+        margin: 0,
+      }}
+    >
       <Stack
         direction={{ xs: "column", md: "row" }}
         justifyContent="space-between"
@@ -112,13 +121,14 @@ const Hero = () => {
       <Box
         sx={{
           position: "absolute",
-          display: "flex",
+          display: { xs: "none", sm: "flex" },
           alignItems: "center",
           justifyContent: "center",
           bottom: 0,
           //   backgroundColor: "red",
           width: "100%",
           padding: "2rem",
+          boxSizing: "border-box",
         }}
       >
         <a href="#about">

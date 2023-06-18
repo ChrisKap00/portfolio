@@ -29,7 +29,8 @@ const ExperienceCard = ({ experience }) => {
       }
       iconStyle={{ backgroundColor: "white" }}
     >
-      <h3>{experience.title}</h3>
+      <h3 style={{ marginBottom: "5px" }}>{experience.title}</h3>
+      <label>{experience.company}</label>
       <p>{experience.description}</p>
       {experience.link !== undefined && (
         <p>

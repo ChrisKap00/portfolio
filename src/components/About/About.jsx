@@ -33,15 +33,16 @@ const About = () => {
             frontend development. My favorite technologies, that I am most familiar and efficient
             with, are React and Express/Node, along with libraries that make the development
             experience better, like Redux and MateriaUI, and tools that make the user experience
-            better, like Framer Motion, D3JS and ThreeJS.
+            better, like Framer Motion and ThreeJS.
           </Box>
         </MotionWrapper>
         <Box
           sx={{
             display: "grid",
-            gridTemplateColumns: `repeat(auto-fill, minmax(min(45%, 260px), 1fr))`,
+            gridTemplateColumns: `repeat(auto-fill, minmax(min(34%, 260px), 1fr))`,
             gridGap: "1rem",
             marginTop: "100px",
+            justifyItems: "center"
           }}
         >
           {cards.map((card, index) => (

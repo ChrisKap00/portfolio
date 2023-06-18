@@ -7,7 +7,16 @@ const Navbar = () => {
   return (
     <Box
       component="div"
-      sx={{ height, position: "sticky", top: 0, backgroundColor: "#040615", zIndex: 2 }}
+      sx={{
+        height,
+        position: "sticky",
+        top: 0,
+        backgroundColor: "#040615",
+        zIndex: 2,
+        width: "100%",
+        paddingInline: { xs: "1rem", sm: "2rem" },
+        boxSizing: "border-box",
+      }}
     >
       <Box sx={{ display: "flex", height }}>
         <label
@@ -23,62 +32,84 @@ const Navbar = () => {
           Christos Kapotos
         </label>
         <Box component="div" sx={{ flexGrow: 1 }}></Box>
-        <a
-          href="#home"
-          style={{
-            display: "flex",
-            color: "white",
-            textDecoration: "none",
-            height,
-            paddingInline: "1rem",
+        <Box
+          sx={{
+            display: { xs: "flex", xssm: "flex" },
             alignItems: "center",
             justifyContent: "center",
           }}
         >
-          Home
-        </a>
-        <a
-          href="#experience"
-          style={{
-            display: "flex",
-            color: "white",
-            textDecoration: "none",
-            height,
-            paddingInline: "1rem",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
-        >
-          Experience
-        </a>
-        <a
-          href="#work"
-          style={{
-            display: "flex",
-            color: "white",
-            textDecoration: "none",
-            height,
-            paddingInline: "1rem",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
-        >
-          Work
-        </a>
-        <a
-          href="#contact"
-          style={{
-            display: "flex",
-            color: "white",
-            textDecoration: "none",
-            height,
-            paddingInline: "1rem",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
-        >
-          Contact
-        </a>
+          <a
+            href="#home"
+            style={{
+              display: "flex",
+              color: "white",
+              textDecoration: "none",
+              height,
+              paddingInline: "1rem",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+          >
+            Home
+          </a>
+          <a
+            href="#about"
+            style={{
+              display: "flex",
+              color: "white",
+              textDecoration: "none",
+              height,
+              paddingInline: "1rem",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+          >
+            About
+          </a>
+          <a
+            href="#experience"
+            style={{
+              display: "flex",
+              color: "white",
+              textDecoration: "none",
+              height,
+              paddingInline: "1rem",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+          >
+            Experience
+          </a>
+          <a
+            href="#work"
+            style={{
+              display: "flex",
+              color: "white",
+              textDecoration: "none",
+              height,
+              paddingInline: "1rem",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+          >
+            Work
+          </a>
+          <a
+            href="#contact"
+            style={{
+              display: "flex",
+              color: "white",
+              textDecoration: "none",
+              height,
+              paddingInline: "1rem",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+          >
+            Contact
+          </a>
+        </Box>
       </Box>
     </Box>
   );

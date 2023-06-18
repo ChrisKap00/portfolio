@@ -29,6 +29,7 @@ const TiltCard = ({ card }) => {
         maxWidth: "260px",
         maxHeight: "320px",
         borderRadius: "20px",
+        userSelect: "none",
       }}
     >
       <Tilt
@@ -61,7 +62,7 @@ const TiltCard = ({ card }) => {
           }}
         >
           {card.image}
-          <label>{card.text}</label>
+          <label style={{ textAlign: "center" }}>{card.text}</label>
         </Box>
       </Tilt>
     </Box>

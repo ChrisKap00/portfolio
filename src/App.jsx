@@ -4,6 +4,8 @@ import Hero from "./components/Hero/Hero";
 import About from "./components/About/About";
 import Experience from "./components/Experience/Experience";
 import Tech from "./components/Tech/Tech";
+import Contact from "./components/Contact/Contact";
+import Stars from "./components/Stars/Stars";
 
 function App() {
   const theme = createTheme({
@@ -34,6 +36,10 @@ function App() {
           <Tech />
           <Experience />
         </Container>
+        <div id="contact" style={{ position: "relative", paddingTop: "5rem" }}>
+          <Contact />
+          <Stars />
+        </div>
       </Box>
     </ThemeProvider>
   );

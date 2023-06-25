@@ -13,6 +13,9 @@
 
 .env
 
+/src/assets/images/hero.png
+/public/react_logo
+
 # misc
 .DS_Store
 .env.local

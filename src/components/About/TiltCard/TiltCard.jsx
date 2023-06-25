@@ -1,19 +1,19 @@
 import React from "react";
-import { Tilt } from "react-tilt";
+import Tilt from "react-parallax-tilt";
 import { motion } from "framer-motion";
 import { Box } from "@mui/material";
 
-const options = {
-  reverse: false,
-  max: 35,
-  perspective: 1000,
-  scale: 1,
-  speed: 3,
-  transition: true,
-  axis: null,
-  reset: true,
-  easing: "cubic-bezier(.03,.98,.52,.99)",
-};
+// const options = {
+//   reverse: false,
+//   max: 35,
+//   perspective: 1000,
+//   scale: 1,
+//   speed: 3,
+//   transition: true,
+//   axis: null,
+//   reset: true,
+//   easing: "cubic-bezier(.03,.98,.52,.99)",
+// };
 
 const direction = "left";
 const type = "spring";
@@ -22,16 +22,7 @@ const duration = 1;
 
 const TiltCard = ({ card }) => {
   return (
-    <Box
-      sx={{
-        width: { xs: "100%", sm: "260px" },
-        height: { xs: "260px", sm: "320px" },
-        maxWidth: "260px",
-        maxHeight: "320px",
-        borderRadius: "20px",
-        userSelect: "none",
-      }}
-    >
+    // <Box sx={{}}>
       <Tilt
         style={{
           width: "100%",
@@ -39,15 +30,17 @@ const TiltCard = ({ card }) => {
           borderRadius: "20px",
           boxShadow: "0 0 50px -5px rgba(255, 255, 255, 0.1)",
         }}
-        options={options}
+        // options={options}
       >
         <Box
           sx={{
             padding: "rem",
-            width: "100%",
-            height: "100%",
+            width: { xs: "100%", sm: "260px" },
+            height: { xs: "260px", sm: "320px" },
             maxWidth: "260px",
             maxHeight: "320px",
+            borderRadius: "20px",
+            userSelect: "none",
             borderRadius: "20px",
             display: "flex",
             flexDirection: "column",
@@ -65,7 +58,7 @@ const TiltCard = ({ card }) => {
           <label style={{ textAlign: "center" }}>{card.text}</label>
         </Box>
       </Tilt>
-    </Box>
+    // </Box>
   );
 };
 

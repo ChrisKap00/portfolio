@@ -27,7 +27,7 @@ const Hero = () => {
 
   return (
     <Box
-      id="home"
+      // id="home"
       sx={{
         height: "calc(100vh - 75px)",
         width: "100%",

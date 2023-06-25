@@ -19,7 +19,8 @@ const Navbar = () => {
       }}
     >
       <Box sx={{ display: "flex", height }}>
-        <label
+        <a
+          href="#home"
           style={{
             fontWeight: "600",
             fontSize: "1.5rem",
@@ -27,10 +28,12 @@ const Navbar = () => {
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
+            color: "inherit",
+            textDecoration: "none",
           }}
         >
           Christos Kapotos
-        </label>
+        </a>
         <Box component="div" sx={{ flexGrow: 1 }}></Box>
         <Box
           sx={{
@@ -82,7 +85,7 @@ const Navbar = () => {
             Experience
           </a>
           <a
-            href="#work"
+            href="#projects"
             style={{
               display: "flex",
               color: "white",
@@ -93,7 +96,7 @@ const Navbar = () => {
               justifyContent: "center",
             }}
           >
-            Work
+            Projects
           </a>
           <a
             href="#contact"

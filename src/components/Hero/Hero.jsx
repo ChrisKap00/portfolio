@@ -32,7 +32,7 @@ const Hero = () => {
         height: "calc(100vh - 75px)",
         width: "100%",
         position: "relative",
-        paddingTop: { xs: "1rem", md: 0 },
+        paddingTop: "100px",
         margin: 0,
       }}
     >

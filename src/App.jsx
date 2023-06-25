@@ -16,8 +16,11 @@ function App() {
     breakpoints: {
       values: {
         xs: 0,
-        xssm: 760,
+        mobile: 400,
+        mobilePlus: 600,
+        xssm: 700,
         sm: 800,
+        smmd: 830,
         md: 1065,
         // mdlg:
         lg: 1200,
@@ -40,7 +43,6 @@ function App() {
           <Container maxWidth="xl" sx={{ boxSizing: "border-box" }}>
             <Hero />
             <About />
-            <Tech />
             <Experience />
             <Projects projectOpen={projectOpen} setProjectOpen={setProjectOpen} />
             <Contact />

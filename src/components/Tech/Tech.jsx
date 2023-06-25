@@ -23,9 +23,7 @@ const technologies = [
 
 const Tech = () => {
   return (
-    <div
-      style={{ display: "flex", justifyContent: "center", paddingBottom: "5rem", flexWrap: "wrap" }}
-    >
+    <div style={{ display: "flex", justifyContent: "center", flexWrap: "wrap" }}>
       {technologies.map((technology, index) => (
         <MotionWrapper key={index} extraDelay={0.1 * index}>
           <BallCanvas technology={technology} />

@@ -1,5 +1,14 @@
-import { Box, Button, CircularProgress, Container, Stack, TextareaAutosize } from "@mui/material";
+import {
+  Box,
+  Button,
+  CircularProgress,
+  Container,
+  Stack,
+  TextareaAutosize,
+  useMediaQuery,
+} from "@mui/material";
 import { styled, alpha } from "@mui/material/styles";
+import { useTheme } from "@mui/material/styles";
 import React, { useState } from "react";
 import MotionWrapper from "../MotionWrapper/MotionWrapper";
 import ReactLogoCanvas from "./ReactLogo/ReactLogo";
@@ -36,6 +45,9 @@ const StyledInputBase = styled(TextareaAutosize)(({ theme }) => ({
 const Contact = () => {
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
   const [loading, setLoading] = useState(false);
+  const theme = useTheme();
+  const matchesDownMd = useMediaQuery(theme.breakpoints.down("md"));
+  const matchesDownSm = useMediaQuery(theme.breakpoints.down("sm"));
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -71,7 +83,33 @@ const Contact = () => {
   };
 
   return (
-    <Stack direction={{ xs: "column", lg: "row" }} gap={2} mt={2} pb={10} id="contact">
+    <Stack direction={{ xs: "column", md: "row-reverse" }} gap={2} pb={10} id="contact">
+      <Box flex={1} sx={{ overflow: "hidden" }}>
+        <MotionWrapper
+          variants={{
+            hidden: {
+              x: "100%",
+            },
+            visible: {
+              x: 0,
+            },
+          }}
+          transition={{
+            type: "tween",
+            delay: 0.2,
+            duration: 1,
+            ease: "easeOut",
+          }}
+          styles={{
+            height: matchesDownSm ? "300px" : matchesDownMd ? "500px" : "100%",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          <ReactLogoCanvas />
+        </MotionWrapper>
+      </Box>
       <Box flex={1} sx={{ overflow: "hidden" }}>
         <MotionWrapper
           styles={{
@@ -235,32 +273,6 @@ const Contact = () => {
               </Button>
             </div>
           </form>
-        </MotionWrapper>
-      </Box>
-      <Box flex={1} sx={{ overflow: "hidden" }}>
-        <MotionWrapper
-          variants={{
-            hidden: {
-              x: "100%",
-            },
-            visible: {
-              x: 0,
-            },
-          }}
-          transition={{
-            type: "tween",
-            delay: 0.2,
-            duration: 1,
-            ease: "easeOut",
-          }}
-          styles={{
-            height: "100%",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
-        >
-          <ReactLogoCanvas />
         </MotionWrapper>
       </Box>
     </Stack>

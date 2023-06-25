@@ -21,7 +21,6 @@ const ReactLogoCanvas = () => {
           minPolarAngle={Math.PI / 2}
         />
         <directionalLight intensity={0.3} />
-        {/* <pointLight intensity={0.2}/> */}
         <ReactLogo />
       </Suspense>
     </Canvas>

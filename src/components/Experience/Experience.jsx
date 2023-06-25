@@ -12,25 +12,7 @@ const experiences = [
     title: "Full Stack Developer",
     company: "Afoi Alexiou OE",
     description:
-      "I developed and deployed an eshop full stack web application for the company. The stack used for the project was the MERN stack.",
-    link: "https://afoialexiou.gr",
-    date: "October 2022 - February 2023",
-  },
-  {
-    icon: afoi,
-    title: "Full Stack Developer",
-    company: "Afoi Alexiou OE",
-    description:
-      "I developed and deployed an eshop full stack web application for the company. The stack used for the project was the MERN stack.",
-    link: "https://afoialexiou.gr",
-    date: "October 2022 - February 2023",
-  },
-  {
-    icon: afoi,
-    title: "Full Stack Developer",
-    company: "Afoi Alexiou OE",
-    description:
-      "I developed and deployed an eshop full stack web application for the company. The stack used for the project was the MERN stack.",
+      "I developed and deployed an e-shop full stack web application for the company. The stack used for the project was the MERN stack.",
     link: "https://afoialexiou.gr",
     date: "October 2022 - February 2023",
   },
@@ -38,7 +20,7 @@ const experiences = [
 
 const Experience = () => {
   return (
-    <div style={{ paddingBottom: "5rem" }}>
+    <div id="experience" style={{ paddingBlock: "150px 5rem" }}>
       <MotionWrapper>
         <h1 style={{ fontSize: "3rem" }}>Work Experience</h1>
       </MotionWrapper>

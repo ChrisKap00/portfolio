@@ -36,6 +36,11 @@ const swipePower = (offset, velocity) => {
 const ProjectCard = ({ project, projectOpen, setProjectOpen }) => {
   const theme = useTheme();
   const matches = useMediaQuery(theme.breakpoints.up("sm"));
+  const matchesDownMobile = useMediaQuery(theme.breakpoints.down("mobile"));
+  const matchesDownMobilePlus = useMediaQuery(theme.breakpoints.down("mobilePlus"));
+  const matchesDownXssm = useMediaQuery(theme.breakpoints.down("xssm"));
+  const matchesDownSm = useMediaQuery(theme.breakpoints.down("sm"));
+  const matchesDownMd = useMediaQuery(theme.breakpoints.down("md"));
   const screenHeight = window.innerHeight;
   const [imageHeight, setImageHeight] = useState(0);
   const [[page, direction], setPage] = useState([0, 0]);
@@ -69,6 +74,7 @@ const ProjectCard = ({ project, projectOpen, setProjectOpen }) => {
                 backgroundColor: "#150A30",
                 color: "white",
                 maxWidth: "300px",
+                height: "380px",
                 borderRadius: "10px",
                 cursor: "pointer",
               }}
@@ -106,7 +112,8 @@ const ProjectCard = ({ project, projectOpen, setProjectOpen }) => {
             borderRadius: "10px",
             cursor: "pointer",
             useSelect: "none",
-            overflow: "hidden",
+            overflowX: "hidden",
+            overflowY: "auto",
           }}
         >
           <Box
@@ -153,7 +160,13 @@ const ProjectCard = ({ project, projectOpen, setProjectOpen }) => {
             </AnimatePresence>
             <div
               style={{
-                top: "160px",
+                top: matchesDownMobile
+                  ? " 60px"
+                  : matchesDownMobilePlus
+                  ? "80px"
+                  : matchesDownXssm
+                  ? "120px"
+                  : "160px",
                 position: "absolute",
                 background: "white",
                 borderRadius: "30px",
@@ -176,7 +189,13 @@ const ProjectCard = ({ project, projectOpen, setProjectOpen }) => {
             </div>
             <div
               style={{
-                top: "160px",
+                top: matchesDownMobile
+                  ? " 60px"
+                  : matchesDownMobilePlus
+                  ? "80px"
+                  : matchesDownXssm
+                  ? "120px"
+                  : "160px",
                 position: "absolute",
                 background: "white",
                 borderRadius: "30px",
@@ -204,7 +223,7 @@ const ProjectCard = ({ project, projectOpen, setProjectOpen }) => {
             <p style={{ color: "rgba(255, 255, 255, 0.65)", marginBottom: "30px" }}>
               {project.description}
             </p>
-            <div style={{ display: "flex" }}>
+            <div style={{ display: matches ? "flex" : "block" }}>
               <div style={{ width: "fit-content" }}>
                 <p>
                   Stack: <b>{project.stack}</b>
@@ -220,13 +239,21 @@ const ProjectCard = ({ project, projectOpen, setProjectOpen }) => {
               <div style={{ paddingLeft: "10px" }}>
                 <p>
                   Github repo:{" "}
-                  <a style={{ color: "orange" }} href={project.repo} target="_blank">
+                  <a
+                    style={{ color: "orange", wordBreak: "break-all" }}
+                    href={project.repo}
+                    target="_blank"
+                  >
                     {project.repo}
                   </a>
                 </p>
                 <p style={{ lineHeight: 1.5 }}>
                   URL:{" "}
-                  <a style={{ color: "orange" }} href={project.url} target="_blank">
+                  <a
+                    style={{ color: "orange", wordBreak: "break-all" }}
+                    href={project.url}
+                    target="_blank"
+                  >
                     {project.url}
                   </a>
                   <br></br>
